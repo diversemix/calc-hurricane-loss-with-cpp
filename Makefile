@@ -19,7 +19,7 @@ GID := $(shell id -g)
 export PATH := $(VENV_BIN):$(PATH)
 
 
-all: requirements uninstall-gethurricaneloss install test
+all: venv requirements uninstall-gethurricaneloss install test
 
 requirements:
 	$(SYSTEM_PYTHON) -c "import dataclasses"
@@ -54,7 +54,7 @@ clean:
 venv:
 	@echo Creating a Python environment $(VENV_ROOT)
 
-	$(SYSTEM_PYTHON) -m venv --prompt gethurricaneloss $(VENV_ROOT)
+	virtualenv --python=/usr/bin/python3.7 --prompt gethurricaneloss $(VENV_ROOT)
 
 	@echo
 	@echo done.
