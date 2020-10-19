@@ -54,7 +54,7 @@ clean:
 venv:
 	@echo Creating a Python environment $(VENV_ROOT)
 
-	virtualenv --python=/usr/bin/python3.7 --prompt gethurricaneloss $(VENV_ROOT)
+	virtualenv --python=/usr/bin/python3 --prompt gethurricaneloss $(VENV_ROOT)
 
 	@echo
 	@echo done.
